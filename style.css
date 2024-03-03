@@ -1,0 +1,729 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7ff;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em;
+}
+span{
+    color: #ff0000;
+}
+main {
+    max-width: 350px;
+    height: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to right,#de2324, #ff4f48);
+    border-radius: 0px 0px 60px 60px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px; /* Adjust the value based on your footer height */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#butonmore {
+    padding: 2px 15px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.more{
+    margin-left: 15px;
+    height: 25px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.foterdiv{
+    margin-top: 150vh;
+    margin: 20px auto;
+    width: 390px;
+    height: 250px;
+    background-color: #333;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    margin-left: -20px;
+}
+.fotter{
+    color: white;
+}
+#numberContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px; /* Adjusted gap between columns */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    position: relative; /* Added position relative for positioning the color section */
+}
+
+.number1, .number2, .number3, .number4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.number1 {
+    background-color: #ff2323;
+    color: #fff;
+}
+
+.number2 {
+    background-color: #29ac66;
+    color: #fff;
+}
+
+.number3 {
+    background: linear-gradient(130deg, #ff2323 50%, #b659ff 50%);
+    color: #fff;
+}
+
+.number4 {
+    background: linear-gradient(130deg, #29ac66 50%, #b659ff 50%);
+    color: #fff;
+}
+.colorSection {
+    position: absolute;
+    top: 100%; /* Position it just below the number container */
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.greenColor {
+    flex: 1;
+    background-color: #29ac66;
+    margin: 10px;
+    border-radius: 1px 12px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.violetColor {
+    flex: 1;
+    background-color: #b659ff;
+    margin: 10px;
+    border-radius: 7px 7px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.redColor {
+    flex: 1;
+    background-color: #ff2323;
+    margin: 10px;
+    border-radius: 12px 1px;
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.balance {
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.balance section {
+    text-align: center; /* Center content inside the section */
+}
+
+.balance h2 {
+    margin-bottom: 5px; /* Add spacing below the heading */
+}
+
+.balance p {
+    margin-bottom: 10px; /* Add spacing below the paragraph */
+}
+i3{
+    color: #000000;
+    font-size: 17px;
+}
+i4{
+    color: #ff2323;
+    font-size: 15px;
+}
+.deposit-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4285f4;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #4285f4; /* 2px red border */
+    cursor: pointer;
+    font-size: 16px;
+}
+.withdraw-button {
+    background-color: #ffffff; /* White background */
+    padding: 10px 20px;
+    margin: 10px;
+    color: #4285f4;
+    font-weight: bold;
+    border: 1px solid #4285f4; /* 2px red border */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cautain{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+    font-size: 12px;
+    height: 35px;
+    border-radius: 2px;
+}
+
+p1{
+    margin-left: 10px;
+    color: rgb(94, 94, 94);
+    font-size: 11px;
+}
+i{
+    margin-left: 5px;
+    color: red;
+}
+.bigbox {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    font-size: 12px;
+    height: 90px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow added */
+}
+
+
+.gametypebtn {
+    display: flex;
+}
+
+.gamemode {
+    height: 90px;
+    width: 88px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #b2b2b2;
+    border-radius: 6px;
+}
+#buttonfirst {
+    height: 90px;
+    width: 88px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #b2b2b2;
+    border-radius: 0px 6px 0px 6px;
+}
+#buttonfourth {
+    height: 90px;
+    width: 88px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #b2b2b2;
+    border-radius: 6px 0px 6px 0px;
+}
+.gamemode.selected {
+    background: linear-gradient(to bottom, #ff8584, #fff4f4); /* Linear gradient from top to bottom */
+    color: #d94c4e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a box shadow for a 3D effect */
+}
+.timercontainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(to bottom, #fe8585, #f9514f); /* Linear gradient from top to bottom */
+    margin-bottom: 15px;
+    font-size: 12px;
+    height: 100px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow added */
+}
+.list {
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    margin-left: 5px;
+    height: 22px;
+    width: 130px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    margin-top: -15px;
+}
+.p{
+    text-decoration: none;
+    color: white;
+}
+.howtoplay{
+    color: white;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.dotted-line {
+    height: 90%;
+    border-left: 1px dashed rgb(253, 253, 253); /* Dotted line on the left side */
+    margin-left: 20px;
+}
+.right{
+    color: white;
+    height: 100px;
+    width: 193px;
+    font-size: 14px;
+    font-weight: bold;
+    display: grid;
+    justify-content: right;
+}
+.rightp{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.timer {
+    font-size: 30px;
+    height: 35px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px; /* Add 5px margin to the right */
+  }
+.timerbig{
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    margin-top: -10px;
+  }  
+.priodnum {
+    width: 100px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.priodnum p {
+    margin-right: 2px;
+    text-align: right;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px; /* Adjust the maximum width as needed */
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.scrolling-content {
+    max-height: 200px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
+    scroll-behavior: smooth; /* Enable vertical scrolling within the content */
+}
+.scrolling-content p{
+    color: #29ac66;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p5 {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+.popup-content h2 {
+    color: #ff6600; /* Orange */
+}
+
+strong {
+    color: #0066cc; /* Blue */
+}
+
+.green {
+    color: #00cc00; /* Green */
+    font-weight: bold;
+}
+
+.red {
+    color: #ff0000; /* Red */
+    font-weight: bold;
+}
+
+.violet {
+    color: #9900cc; /* Violet */
+    font-weight: bold;
+}
+
+.number {
+    color: #663399; /* Dark purple */
+    font-weight: bold;
+}
+
+.big {
+    color: #ff9900; /* Orange */
+    font-weight: bold;
+}
+
+.small {
+    color: #ffcc00; /* Yellow */
+    font-weight: bold;
+}
+
+.bigsmall{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.bigbutton{
+    width: 20vh;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #ffa82d;
+}
+.smallbutton{
+    width: 20vh;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(64, 133, 243);
+}
+.buttonmain{
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.126);
+}
+.randomnumber{
+    margin-top: 65px;
+    display: flex;
+}
+.randombtn{
+    padding: 10px; /* Adjust padding as needed */
+    background-color: white;
+    color: #da8e39;
+    border: 2px #da8e39 solid;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.randombtnamount {
+    padding: 10px; /* Adjust padding as needed */
+    color: #818181;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.randombtn:nth-child(1) {
+    background-color: #f0f0f0; /* Red */
+    margin: 2px;
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
+.randombtnamount:nth-child(2) {
+    background-color: #f0f0f0; /* Orange */
+    margin: 2px;
+    margin-left: 2px;
+}
+
+.randombtnamount:nth-child(3) {
+    background-color: #f0f0f0; /* Yellow */
+    margin-right: 0px;
+    margin: 2px;
+}
+
+.randombtnamount:nth-child(4) {
+    background-color: #f0f0f0; /* Green */
+    margin-left: 2px;
+    margin: 2px;
+}
+
+.randombtnamount:nth-child(5) {
+    background-color: #f0f0f0; /* Blue */
+    margin-right: 0px;
+    margin: 2px;
+}
+
+.randombtnamount:nth-child(6) {
+    background-color: #f0f0f0; /* Purple */
+    margin-right: 0px;
+    margin: 2px;
+}
+
+.randombtnamount:nth-child(7) {
+    background-color: #f0f0f0; /* Pink */
+    margin-right: 0px;
+    margin: 2px;
+}
+.randombtnamount.selected {
+    color: white;
+    background-color: #3fae72; /* Selected background color */
+}
+.modal {
+    border-radius: 20px 20px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #ffffff;
+    z-index: 1000;
+    overflow: hidden;
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1000; /* Make sure the overlay is on top of other elements */
+  }
+  
+  
+
+.modal-content{
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+.modal input {
+    padding: 5px;
+    margin-top: 10px;
+    width: calc(20% - 20px);
+    font-size: 16px;
+}
+
+.modal button {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: calc(40% - 20px);
+}
+
+.closebetbtn {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    height: 28px;
+    width: 100%;
+    background-color: #25263c;
+}
+
+.close_btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%; /* Updated to 30% */
+    height: 30px;
+    background-color: #25263c;
+    padding: 0 10px; /* Added padding */
+}
+
+.close-button {
+    color: #ffffff;
+    background-color: transparent;
+    margin-right: 30%;
+}
+
+.bet-btn-div {
+    display: flex;
+    text-align: center;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: center; /* Add this line to horizontally center the button */
+}
+
+.betbtn {
+    white-space: nowrap;
+    width: 70%; /* Updated to 70% */
+    border-radius: 0px;
+    padding: 0 10px; /* Added padding */
+    background-color: transparent;
+}
+
+
+span2 {
+    color: white;
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+.chosendiv{
+    background-color: rgb(64, 133, 243);
+    color: white;
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0 0%, 100% 0%, 100% 75%, 50% 100%, 0 75%);
+}
+.wingo1min {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adjust the value to your preference */
+}
+
+.chosen-number {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    background-color: white;
+    border-radius: 5px;
+    padding: 3px;
+    padding-top: 0px;
+    width: 30vh;
+    margin-top: 5px; /* Adjust the value to your preference */
+}
+
+
+
+
+/* Balance buttons */
+
+.balanceleft{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 90px;
+}
+
+.balancebtn{
+    display: flex;
+    gap: 10px;
+}
+
+.balancebtn button{
+    background-color: #f0f0f0;
+    color: #4d4d4d;
+}
+.balancebtn button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+.balanceright{
+    display: flex;
+    gap: 150px;
+}
+.balancequantity{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#betAmount{
+    margin-bottom: 8px;
+    width: 40px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+#betAmount:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+.quantityx{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    margin-left: 40px;
+    padding: 0px;
+    align-items: center;
+    text-align: center;
+    justify-content: right;
+}
+.quantityx button{
+    background-color: #f0f0f0;
+    color: #4d4d4d;
+}
+.quantityx button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+.prerules{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+.decrementAmount{
+    border-radius: 0px;
+}
+.incrementAmount{
+    border-radius: 0px;
+}

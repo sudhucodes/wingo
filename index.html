@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Prediction Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="overlay"></div>
+    <header>
+        <h1><span>88</span> Club Game</h1>
+    </header>
+
+    <main>
+        <div id="indexContent" class="balance">
+            <section>
+                <h2>₹0.75 <i3 class="fa-solid fa-arrows-rotate"></i3></h2>
+                <p><i4 class="fa-solid fa-wallet"></i4> Wallet balance</p>
+                <button class="withdraw-button">Withdraw</button>
+                <button onclick="deposite()" class="deposit-button">Deposite</button>
+            </section>
+        </div>
+        <div class="cautain">
+            <i class="fa-solid fa-volume-high"></i><p1>Welcome to 88 Club! Wish all of coustomers <br> have good experience playing game.
+            </p1>
+            <button id="butonmore" onclick="detail()" class="more">Detail</button>
+        </div>
+        <div class="bigbox">
+            <div class="gametypebtn">
+                <button id="buttonfirst" class="gamemode selected" onclick="selectGameMode(this)"><i1 class="fas fa-clock"></i1>WinGo<br>1Min</button>
+                <button class="gamemode" onclick="selectGameMode(this)"><i1 class="fas fa-clock"></i1>WinGo<br>3Min</button>
+                <button class="gamemode" onclick="selectGameMode(this)"><i1 class="fas fa-clock"></i1>WinGo<br>5Min</button>
+                <button id="buttonfourth" class="gamemode" onclick="selectGameMode(this)"><i1 class="fas fa-clock"></i1>WinGo<br>10Min</button>
+            </div>
+        </div>
+        <div class="timercontainer">
+            <div class="timercontainercontent">
+                <div class="list">
+                    <a class="p" href="#" id="howToPlayLink"><i5 class="fa-solid fa-clipboard-list"></i5> How to play</a>
+                </div>
+                <p class="howtoplay">WinGo 1Min</p>
+            </div>
+            <div class="dotted-line"></div>
+            <div class="right">
+                <p class="rightp">Time remaining</p>
+                <div class="timerbig">
+                    <div class="timer">01.00</div>
+                </div>
+                <div class="priodnum">
+                    <p>20240226010502</p>
+                </div>
+            </div>
+        </div>
+       
+            <div class="buttonmain">
+                <div id="numberContainer">
+                    <button class="number3">0</button>
+                    <button class="number2">1</button>
+                    <button class="number1">2</button>
+                    <button class="number2">3</button>
+                    <button class="number1">4</button>
+                    <button class="number4">5</button>
+                    <button class="number1">6</button>
+                    <button class="number2">7</button>
+                    <button class="number1">8</button>
+                    <button class="number2">9</button>
+                    <div class="colorSection">
+                        <button class="greenColor">Green</button>
+                        <button class="violetColor">Violet</button>
+                        <button class="redColor">Red</button>
+                    </div>
+                </div>
+                <div class="randomnumber">
+                    <button class="randombtn" onclick="generateRandomNumber()">Random</button>
+                    <button class="randombtnamount selected" onclick="selectRandomAmount('X1')">X1</button>
+                    <button class="randombtnamount" onclick="selectRandomAmount('X5')">X5</button>
+                    <button class="randombtnamount" onclick="selectRandomAmount('X10')">X10</button>
+                    <button class="randombtnamount" onclick="selectRandomAmount('X20')">X20</button>
+                    <button class="randombtnamount" onclick="selectRandomAmount('X50')">X50</button>
+                    <button class="randombtnamount" onclick="selectRandomAmount('X100')">X100</button>
+                    <!-- Add more buttons for X20, X50, X100 as needed -->
+                </div>
+            
+            <div class="bigsmall">
+                <button class="bigbutton">Big</button>
+                <button class="smallbutton">Small</button>
+            </div>
+            </div>
+        
+        <!-- popup for amount bet -->
+        <div class="modal">
+            <div class="chosendiv">
+                <p class="wingo1min">Win Go 1Min</p>
+                <p class="chosen-number"></p>
+            </div>
+            <div class="modal-content">
+                <div class="balanceleft">
+                    <p>Balance</p>
+                    <div class="balancebtn">
+                        <button onclick="selectAmount(1)" id="btn1" class="selected">1</button>
+                        <button onclick="selectAmount(10)" id="btn10">10</button>
+                        <button onclick="selectAmount(100)" id="btn100">100</button>
+                        <button onclick="selectAmount(1000)" id="btn1000">1000</button>
+                    </div>
+                </div>
+                <div class="balancdown">
+                    <div class="balanceright">
+                        <p>Quantity</p>
+                        <div class="balancequantity">
+                            <button class="decrementAmount" id="decrementAmount">-</button>
+                            <input type="number" id="betAmount" readonly="1">
+                            <button class="incrementAmount" id="incrementAmount">+</button>
+                        </div>
+                    </div>
+                    <div class="quantityx">
+                        <button onclick="selectQuantity(1)" id="quantityBtnX1" class="selected">X1</button>
+                        <button onclick="selectQuantity(5)" id="quantityBtnX5">X5</button>
+                        <button onclick="selectQuantity(10)" id="quantityBtnX10">X10</button>
+                        <button onclick="selectQuantity(20)" id="quantityBtnX20">X20</button>
+                        <button onclick="selectQuantity(50)" id="quantityBtnX50">X50</button>
+                        <button onclick="selectQuantity(100)" id="quantityBtnX100">X100</button>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="prerules">
+                    <input id="iagree" type="checkbox" class="preruleschekbox">
+                    <label for="iagree">I agree</label>
+                </div>
+            
+            <div class="closebetbtn">
+                <div class="close_btn-div">
+                    <button class="close-button">Cancel</button>
+                </div>
+                <div class="bet-btn-div">
+                    <button class="betbtn" id="placeBet">Total amount :</button>
+                </div>                
+            </div>
+        </div>
+
+
+        <section class="section2">
+            <h2>About Us</h2>
+            <p>Learn more about our color prediction platform and its features.</p>
+        </section3>
+
+        <div class="foterdiv">
+                <p11 class="fotter">&copy; 2024 Color Prediction Game. All rights reserved.</p11>
+        </div>
+    </main>
+    <!-- Popup container -->
+<div class="popup" id="howToPlayPopup">
+    <div class="popup-content">
+        <!-- Content for "How to play" -->
+        <h2>How to play?</h2>
+        <div class="scrolling-content">
+            <p5>
+                <strong>Trading Overview:</strong><br>
+                1 minute, 1 issue; 55 seconds to order; 5 seconds waiting for the draw. It opens all day. The total number of trades is 1440 issues.<br><br>
+            
+                <strong>Trade Cost:</strong><br>
+                If you spend $100 to trade, after deducting a service fee of 2%, the contract amount is $98.<br><br>
+            
+                <strong>Trade Options:</strong><br>
+                1. Select <span class="green">green</span>: If the result shows 1, 3, 7, 9, you will get $196. If the result shows 5, you will get $147.<br>
+                2. Select <span class="red">red</span>: If the result shows 2, 4, 6, 8, you will get $196. If the result shows 0, you will get $147.<br>
+                3. Select <span class="violet">violet</span>: If the result shows 0 or 5, you will get $441.<br>
+                4. Select a specific <span class="number">number</span>: If the result is the same as the number you selected, you will get $882.<br>
+                5. Select <span class="big">big</span>: If the result shows 5, 6, 7, 8, 9, you will get $196.<br>
+                6. Select <span class="small">small</span>: If the result shows 0, 1, 2, 3, 4, you will get $196.<br>
+            </p5>
+            
+        <!-- Close button -->
+    </div>
+        <span class="close" id="closePopup">&times;</span>
+    </div>
+</div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
